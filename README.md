@@ -1,4 +1,8 @@
-# Welcome to Remix!
+# Cloudinary Upload Example
+
+1. Change .env.example to .env
+2. Fill in the .env with your cloudinary credentials
+3. Profit?
 
 - [Remix Docs](https://remix.run/docs)
 
