@@ -1,4 +1,5 @@
 # Cloudinary Upload Example
+This is a very simple cloudinary image upload example using Remix, I left out any styling to keep things as simple as I could.
 
 1. Change .env.example to .env
 2. Fill in the .env with your cloudinary credentials

@@ -4,7 +4,7 @@ import { Form, useActionData } from "@remix-run/react";
 import type { UploadApiResponse } from "cloudinary";
 import { getCloudinaryImage, getUploadHandler } from "~/utils/cloudinary";
 
-const ERROR_MESSAGE = "image-upload-error";
+const ERROR_RESPONSE = "image-upload-error";
 
 type ImageWithUrl = UploadApiResponse & {
   imageUrl: string;
@@ -36,7 +36,7 @@ export const action = async ({ request }: ActionArgs) => {
     return imageData;
   } catch (error) {
     console.error(error);
-    return ERROR_MESSAGE;
+    return ERROR_RESPONSE;
   }
 };
 
@@ -48,7 +48,7 @@ export default function Index() {
 
   return (
     <div>
-      {data === ERROR_MESSAGE ? "Error uploading image" : null}
+      <div>{data === ERROR_RESPONSE ? "Error uploading image" : null}</div>
 
       <Form encType="multipart/form-data" method="post">
         <input
